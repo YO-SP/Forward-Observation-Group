@@ -161,11 +161,6 @@ footer p{
     font-size: 15px;
 }
 
-/* ====================== */
-/* Tambahan: MEDIA QUERY  */
-/* ====================== */
-
-/* Responsif untuk tablet & HP */
 @media screen and (max-width: 768px) {
   #about_us p,
   #philosophy p {
@@ -191,7 +186,6 @@ footer p{
   }
 }
 
-/* Tambahan untuk HP kecil */
 @media screen and (max-width: 480px) {
   #about_us h1,
   #judul_filo h1,

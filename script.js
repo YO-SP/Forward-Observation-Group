@@ -7,3 +7,8 @@ images.forEach(function(el){
     });
 });
 
+document.getElementById("toggle-theme").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.getElementById("nav_bar").classList.toggle("dark");
+  document.querySelector("footer").classList.toggle("dark");
+} )

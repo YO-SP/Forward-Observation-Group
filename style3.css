@@ -11,6 +11,16 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    user-select: none; 
+}
+
+body.dark{
+    width: 100%;   
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background-color: rgb(0, 0, 0); 
 }
 
@@ -24,7 +34,7 @@ body {
     z-index: 5;
 }
 
-#nav_bar a {
+#nav_bar a{
     font-family: "Oswald", sans-serif; 
     font-weight: 550; 
     color: white; 
@@ -58,7 +68,7 @@ body {
 
 #about_us {
     scroll-margin-top: 60px;
-    color: white; 
+    color: rgb(0, 0, 0); 
 }
 
 #about_us h1 {
@@ -68,6 +78,16 @@ body {
     font-weight: 700;
     font-style: normal;
     font-size: 50px;
+}
+
+body.dark #about_us h1{
+    text-align: center; 
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    color:rgb(255, 255, 255); 
 }
 
 #about_us p{
@@ -81,14 +101,25 @@ body {
     text-align: justify; 
 }
 
+body.dark #about_us p{
+   padding-left: 100px;
+    padding-right: 100px; 
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 23px;
+    text-align: justify;
+    color: white; 
+}
+
 #judul_filo{
-  scroll-margin-top: 60px;
-  color: white; 
-   
+    scroll-margin-top: 60px;
+    color: rgb(0, 0, 0);
 }
 
 #judul_filo h1{
-   text-align: center; 
+    text-align: center; 
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -96,11 +127,20 @@ body {
     font-size: 50px;
 }
 
+body.dark #judul_filo h1{
+    text-align: center; 
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    color: white; 
+}
+
 #philosophy{
     display: flex;
     justify-content: flex-start;
-    color: white; 
-    
+    color: rgb(0, 0, 0); 
 }
 
 #philosophy p{
@@ -114,20 +154,52 @@ body {
     text-align: justify; 
 }
 
+body.dark #philosophy p{
+    padding-left: 100px;
+    padding-right: 100px; 
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 23px;
+    text-align: justify;
+    color: white; 
+}
+
 #philosophy img{
     width: 300px;  
     height: 200px; 
     margin-right: 70px; 
 }
 
+body.dark #philosophy img{
+    width: 300px;  
+    height: 200px; 
+    margin-right: 70px;
+    border-style: solid; 
+    border-color: rgb(255, 255, 255);
+    border-width: 1px
+
+}
 #action_cam{
     text-align: center; 
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 35px;
+    font-size: 35px; 
     scroll-margin-top: 60px;
+}
+
+body.dark #action_cam{
+    text-align: center; 
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px; 
+    scroll-margin-top: 60px;
+    color:rgb(255, 255, 255); 
 }
 
 #action_cam img{
@@ -161,4 +233,51 @@ footer {
 footer p{
     font-family: "Oswald", sans-serif;
     font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #about_us p,
+  #philosophy p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+  }
+
+  #philosophy {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #philosophy img {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  #action_cam img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about_us h1,
+  #judul_filo h1,
+  #action_cam h1 {
+    font-size: 30px;
+  }
+
+  #about_us p,
+  #philosophy p {
+    font-size: 16px;
+  }
+
+  #nav_bar {
+    flex-wrap: wrap;
+  }
+
+  #nav_bar a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
